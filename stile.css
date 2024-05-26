@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #FFF;
+    font: 16px/28px; /*Здесь будет потом шрифт*/
+    background-color: black;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: .4s;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+button {
+    display: block;
+    border: none;
+    background-color: transparent;
+    font: inherit;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+.title-section {
+    margin-bottom: 40px;
+    font-size: 52px;
+    line-height: 64px;
+    letter-spacing: 0.6px;
+    text-align: center;
+}
+
+
+.btn-primary {
+    padding: 12px 24px;
+    font-weight: 600;
+    background-color: #EE8313;
+}
+
+.btn-primary:hover {
+    background-color: #ef5e10;
+}
+
+
+.btn-secondary {
+    padding: 12px 24px;
+    font-weight: 600 #EE8313;
+    color: #EE8313;
+    border: 1px solid;
+    line-height: 16px;
+}
+
+/* Header */
+#header-section {
+    padding: 65px 0 145px;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+
+.header-logo__img {
+    width: 48px;
+    height: 48px;
+}
+
+
+.nav-main {
+    margin-left: auto;
+}
+
+
+.nav-main_list {
+    display: flex;
+    gap: 26px;
+    margin-right: 60px;
+}
+
+
+.nav-main_link:hover {
+    color: #EE8313;
+}
+
+
+/* Banner */
+#banner-section {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60px;
+}
+
+
+.banner {
+    max-width: 475px;
+    padding-top: 45px;
+}
+
+
+.banner-header {
+    font-size: 52px;
+    line-height: 64px;
+    letter-spacing: 0.6px;
+}
+
+
+.banner_text {
+    margin: 32px 0 48px;
+    font-size: 17px;
+    color: rgb(255 255 255 / 80%);
+}
+
+
+.banner-links-wrap {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+
+.bunner-features_text {
+    font-weight: 600;
+    line-height: 24px;
+}
+.bunner-features_text:first-child {
+    margin-right: 40px;
+}
+
+
+.bunner-features_text-strong {
+    margin-right: 3px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    vertical-align: sub;
+}
+
+
+.banner-img {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+
+.banner-img::before {
+    position: absolute;
+    content: '';
+    z-index: 2;
+    width: 77%;  /* Вот тут то что связанно с аранжевой машиной (Возможно нужно будет коректировать) */
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: url(img/php.svg) no-repeat;
+}
+
+.banner-img::after {
+    position: absolute;
+    content: '';
+    z-index: 1;
+    width: 75%; 
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgb(52 52 52 / 30%);
+}
+
+
+
+/* Rent */
+#rent-section {
+    padding: 120px 0;
+}
+
+
+/* Ну вот эта хуйня не работает
+Поправка: ЭТО БЫЛА БЛЯДСКАЯ ЕДЕНИЦА, А НЕ АНГЛИЙСКАЯ БУКВА Л!!! */
+.rent-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+
+.rent {
+    position: relative;
+    height: 542px;
+    font-weight: 600;
+    background: url(img/Картинка\ 2.jpg) 50%/cover no-repeat;
+}
+
+
+.rent:nth-child(2) {
+    background-image: url(img/Картинка\ 3.jpg);
+}
+.rent:nth-child(3) {
+    background-image: url(img/Картинка\ 4.jpg);
+}
+.rent:nth-child(4) {
+    background-image: url(img/Картинка\ 5.jpg);
+}
+
+
+.rent_name {
+    color: #EE8313;
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    font-size: 40px;
+    letter-spacing: 0.6px;
+}
+
+
+.rent_link {
+    position: absolute;
+    bottom: 48px;
+    right: 60px;
+    padding-right: 30px;
+    font-size: 24px;
+    letter-spacing: 0.6px;
+    line-height: 32px;
+}
+
+
+.rent_link:hover {
+    color: #EE8313;
+}
+
+
+.rent_link::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 0px;
+    width: 8px;
+    height: 16px;
+    background: url() 50%/cover no-repeat;
+    transform: translateY(-50%);
+}
+
+
+/* Services */
+#services-section {
+    padding-bottom: 120px;
+}
+
+
+.services-section_title {
+    margin-bottom: 66px;
+    text-align: left;
+}
+
+
+.services-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+
+.services_img {
+    margin-bottom: 24px;
+}
+
+
+.services_title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+
+.services_text {
+    color: rgb(255 255 255 / 80%);
+}
+
+
+/* Destinayion */
+#destination-section {
+    padding-bottom: 162px;
+}
+
+
+.destination-section_title {
+    width: 590px;
+    margin: 0 auto 40px;
+}
+
+
+.destination-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+
+.destination {
+    border: 1px solid #171717;
+    background-color: #171717;
+}
+
+
+.destination-info {
+    padding: 24px;
+}
+
+
+
+.destination_title {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+
+
+.destination_text {
+    margin: 10px 0 25px;
+    color: rgb(255 255 255 / 80%);
+}
+
+
+
+.destination_price {
+    position: relative;
+    display: block;
+    padding-left: 42px;
+    margin-bottom: 17px;
+    font-weight: 600;
+}
+
+
+
+.destination_price::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    background: url(img/Машинка.png);
+    transform: translateY(-50%);
+}
+
+
+
+
+.destination_link {
+    color: #EE8313;
+}
+
+
+
+.destination_link:hover {
+    color: #EF5E10;
+}
+
+
+
+/*Footer*/
+#footer-sectinon {
+    padding-top: 40px;
+    background-color: #1F1905;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 65px;
+}
+
+
+.footer-logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 64px;
+    font-weight: 600px;
+}
+
+
+.footer-about_img {
+    width: 48px;
+    height: 48px;
+}
+
+
+
+.footer-about_text {
+    font-size: 18px;
+    line-height: 32px;
+    max-width: 235px;
+}
+
+
+
+.footer-nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 45px;
+    margin: 40px 100px 0 auto;
+}
+
+
+
+.footer-nav_header {
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+
+
+.footer-nav_item {
+    margin-bottom: 28px;
+    line-height: 20px;
+}
+
+
+
+.footer-nav_link {
+    color: rgb(255 255 255 / 80%);
+}
+
+
+
+.footer-nav_link:hover {
+    color: #EE8313;
+}
+
+
+
+.footer-copyright {
+    background-color: #EE8313;
+    padding: 20px 0;
+}
+
+
+
+.footer-copyright_text {
+    text-align: center;
+}
